@@ -12,6 +12,7 @@ Arquivos esperados:
 
 - `desafios/04-api-rest-go/output/explicacao-api-rest.md`
 - `desafios/04-api-rest-go/output/testes-com-curl.md`
+- `desafios/04-api-rest-go/output/revisao-documentacao.md`
 
 Não altere a pasta de outro desafio neste PR.
 
@@ -19,6 +20,15 @@ Não altere a pasta de outro desafio neste PR.
 ## Objetivo
 
 Construir uma API REST simples em Go para o Glossário Tech para TPM.
+
+Antes de implementar a API, leia e revise:
+
+- [`docs/produto.md`](../../docs/produto.md)
+- [`docs/prd.md`](../../docs/prd.md)
+- [`docs/api-design.md`](../../docs/api-design.md)
+- [`docs/data-modeling.md`](../../docs/data-modeling.md)
+
+A implementação deve seguir essa documentação. Se você perceber que a documentação precisa mudar, explique o motivo no PR.
 
 ## Conceitos
 
@@ -59,10 +69,19 @@ produto-final/api-go/
 produto-final/api-go/
 desafios/04-api-rest-go/output/explicacao-api-rest.md
 desafios/04-api-rest-go/output/testes-com-curl.md
+desafios/04-api-rest-go/output/revisao-documentacao.md
 ```
+
+Em `revisao-documentacao.md`, explique:
+
+- quais endpoints você implementou;
+- se eles seguem o API Design;
+- se o modelo de dados segue o Data Modeling;
+- se algum ponto da documentação precisou mudar.
 
 ## Critérios de aceite
 
+- [ ] Li PRD, API Design e Data Modeling antes de implementar.
 - [ ] API roda localmente.
 - [ ] Tem CRUD completo.
 - [ ] Usa JSON.

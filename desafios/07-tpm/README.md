@@ -15,6 +15,7 @@ Arquivos esperados:
 - `desafios/07-tpm/output/riscos.md`
 - `desafios/07-tpm/output/roadmap.md`
 - `desafios/07-tpm/output/plano-de-release.md`
+- `desafios/07-tpm/output/revisao-documentacao-produto.md`
 
 Não altere a pasta de outro desafio neste PR.
 
@@ -22,6 +23,17 @@ Não altere a pasta de outro desafio neste PR.
 ## Objetivo
 
 Tratar o Glossário Tech para TPM como um pequeno produto real.
+
+Neste desafio, você vai praticar uma responsabilidade importante de TPM: manter documentação clara para alinhar produto e engenharia.
+
+Revise os documentos:
+
+- [`docs/produto.md`](../../docs/produto.md)
+- [`docs/prd.md`](../../docs/prd.md)
+- [`docs/api-design.md`](../../docs/api-design.md)
+- [`docs/data-modeling.md`](../../docs/data-modeling.md)
+
+A documentação deve servir como guia do desenvolvimento e como material para explicar o produto para pessoas técnicas e não técnicas.
 
 ## Entregáveis
 
@@ -31,6 +43,7 @@ desafios/07-tpm/output/criterios-de-aceite.md
 desafios/07-tpm/output/riscos.md
 desafios/07-tpm/output/roadmap.md
 desafios/07-tpm/output/plano-de-release.md
+desafios/07-tpm/output/revisao-documentacao-produto.md
 ```
 
 ## Perguntas que você precisa responder
@@ -45,6 +58,7 @@ desafios/07-tpm/output/plano-de-release.md
 
 ## Critérios de aceite
 
+- [ ] Revisou PRD, API Design e Data Modeling.
 - [ ] Tem backlog claro.
 - [ ] Tem critérios de aceite.
 - [ ] Tem riscos e mitigação.
