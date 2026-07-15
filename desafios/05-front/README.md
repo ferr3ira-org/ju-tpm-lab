@@ -1,5 +1,21 @@
 # Desafio 05 — Front básico
 
+## Onde colocar sua entrega
+
+Coloque **todos os arquivos deste desafio** em:
+
+```text
+desafios/05-front/output/
+```
+
+Arquivos esperados:
+
+- `desafios/05-front/output/explicacao-front.md`
+- `desafios/05-front/output/prints-ou-descricao.md`
+
+Não altere a pasta de outro desafio neste PR.
+
+
 ## Objetivo
 
 Criar uma interface simples para consumir a API REST em Go.
@@ -37,3 +53,12 @@ desafios/05-front/output/prints-ou-descricao.md
 - [ ] Consome a API.
 - [ ] Tem README com instruções.
 - [ ] Ju consegue explicar diferença entre front e backend.
+
+
+## Checklist antes de abrir PR
+
+- [ ] Coloquei os arquivos na pasta `output/` deste desafio.
+- [ ] Atualizei `docs/diario-de-estudos.md`.
+- [ ] Sei explicar com minhas palavras o que fiz.
+- [ ] Usei IA como ajuda, mas revisei o resultado.
+- [ ] Abri PR pedindo review do Doug.

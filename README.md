@@ -56,13 +56,21 @@ Exemplo de termo:
 }
 ```
 
-## Como estudar
+## Comece por aqui
 
-Leia primeiro:
+1. Leia [`GUIA-INICIAL.md`](GUIA-INICIAL.md) para configurar VS Code, Markdown preview, SSH e clone do repo.
+2. Leia [`COMO-ESTUDAR.md`](COMO-ESTUDAR.md).
+3. Leia [`COMO-ABRIR-PR.md`](COMO-ABRIR-PR.md).
+4. Comece pelo [`desafios/01-ia-llm/README.md`](desafios/01-ia-llm/README.md).
 
-- [`COMO-ESTUDAR.md`](COMO-ESTUDAR.md)
-- [`COMO-ABRIR-PR.md`](COMO-ABRIR-PR.md)
+## Regra dos outputs
 
-Depois comece pelo desafio:
+Cada desafio tem uma pasta `output/`. Sua entrega deve ficar sempre nessa pasta.
 
-- [`desafios/01-ia-llm/README.md`](desafios/01-ia-llm/README.md)
+Exemplo:
+
+```text
+desafios/01-ia-llm/output/resumo.md
+```
+
+Não misture entregas de desafios diferentes no mesmo Pull Request.

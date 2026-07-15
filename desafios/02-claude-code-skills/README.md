@@ -1,5 +1,29 @@
 # Desafio 02 — Claude Code e skills
 
+## Onde colocar sua entrega
+
+Coloque **todos os arquivos deste desafio** em:
+
+```text
+desafios/02-claude-code-skills/output/
+```
+
+Arquivos esperados:
+
+- `desafios/02-claude-code-skills/output/claude-code.md`
+- `desafios/02-claude-code-skills/output/skills.md`
+- `desafios/02-claude-code-skills/output/testes-da-skill.md`
+- `desafios/02-claude-code-skills/output/como-usei-claude-code.md`
+
+Não altere a pasta de outro desafio neste PR.
+
+
+## Regra obrigatória
+
+Este desafio deve ser feito usando **Claude Code**.
+
+Além dos arquivos principais, registre em `como-usei-claude-code.md` quais prompts você usou, o que a IA ajudou a entender e o que você revisou antes de aceitar.
+
 ## Objetivo
 
 Aprender a usar Claude Code como par técnico e entender o conceito de skills.
@@ -32,3 +56,12 @@ desafios/02-claude-code-skills/output/testes-da-skill.md
 - [ ] Criou ou descreveu uma skill útil para estudos.
 - [ ] Mostrou testes com pelo menos 3 termos.
 - [ ] Atualizou o diário de estudos.
+
+
+## Checklist antes de abrir PR
+
+- [ ] Coloquei os arquivos na pasta `output/` deste desafio.
+- [ ] Atualizei `docs/diario-de-estudos.md`.
+- [ ] Sei explicar com minhas palavras o que fiz.
+- [ ] Usei IA como ajuda, mas revisei o resultado.
+- [ ] Abri PR pedindo review do Doug.

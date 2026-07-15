@@ -2,6 +2,20 @@
 
 Este tutorial é para você conseguir entregar cada desafio.
 
+
+## Conceitos rápidos
+
+- **Branch**: uma cópia paralela do projeto para você trabalhar sem mexer direto na `main`.
+- **Commit**: um pacote de mudanças salvo com uma mensagem.
+- **Push**: enviar sua branch e commits para o GitHub.
+- **Pull Request (PR)**: pedido para revisar e juntar sua mudança na branch principal.
+- **Review**: comentários/aprovação de outra pessoa antes do merge.
+- **Merge**: juntar sua branch aprovada na `main`.
+
+Regra da trilha:
+
+> Você só faz merge depois que o Doug aprovar o PR.
+
 ## Uma vez no começo
 
 Clone o repo:

@@ -1,5 +1,21 @@
 # Desafio 04 — API REST em Go
 
+## Onde colocar sua entrega
+
+Coloque **todos os arquivos deste desafio** em:
+
+```text
+desafios/04-api-rest-go/output/
+```
+
+Arquivos esperados:
+
+- `desafios/04-api-rest-go/output/explicacao-api-rest.md`
+- `desafios/04-api-rest-go/output/testes-com-curl.md`
+
+Não altere a pasta de outro desafio neste PR.
+
+
 ## Objetivo
 
 Construir uma API REST simples em Go para o Glossário Tech para TPM.
@@ -53,3 +69,12 @@ desafios/04-api-rest-go/output/testes-com-curl.md
 - [ ] Retorna status codes adequados.
 - [ ] README explica como rodar.
 - [ ] Ju consegue explicar GET, POST, PUT e DELETE.
+
+
+## Checklist antes de abrir PR
+
+- [ ] Coloquei os arquivos na pasta `output/` deste desafio.
+- [ ] Atualizei `docs/diario-de-estudos.md`.
+- [ ] Sei explicar com minhas palavras o que fiz.
+- [ ] Usei IA como ajuda, mas revisei o resultado.
+- [ ] Abri PR pedindo review do Doug.
