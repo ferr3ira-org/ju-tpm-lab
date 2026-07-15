@@ -234,11 +234,11 @@ Regra importante:
 
 > Você pode compartilhar a chave pública. Nunca compartilhe a chave privada.
 
-Arquivos comuns:
+Neste guia, vamos criar a chave com o nome da Ju para ficar fácil de reconhecer:
 
 ```text
-~/.ssh/id_ed25519      ← chave privada, não compartilhar
-~/.ssh/id_ed25519.pub  ← chave pública, pode cadastrar no GitHub
+~/.ssh/ju_github      ← chave privada, não compartilhar
+~/.ssh/ju_github.pub  ← chave pública, pode cadastrar no GitHub
 ```
 
 O símbolo `~` significa sua pasta de usuário no Linux.
@@ -256,19 +256,21 @@ O comando `ls` lista arquivos.
 Se aparecer algo como:
 
 ```text
-/home/seu-usuario/.ssh/id_ed25519.pub
+/home/seu-usuario/.ssh/ju_github.pub
 ```
 
-você já tem uma chave pública.
+você já tem uma chave pública da Ju.
 
-Se aparecer erro dizendo que não encontrou arquivo, crie uma chave nova no próximo passo.
+Se aparecer outra chave, como `id_ed25519.pub`, ela pode até funcionar, mas para este guia vamos usar `ju_github.pub` para ficar mais fácil de entender.
+
+Se não aparecer `ju_github.pub`, crie uma chave nova no próximo passo.
 
 ## 14. Criar uma chave SSH
 
-Troque o email pelo email da sua conta GitHub:
+Crie uma chave com nome fácil de reconhecer:
 
 ```bash
-ssh-keygen -t ed25519 -C "seu-email-do-github@example.com"
+ssh-keygen -t ed25519 -C "ju-github" -f ~/.ssh/ju_github
 ```
 
 O que esse comando faz?
@@ -286,7 +288,7 @@ Quando perguntar senha da chave, para estudos você pode apertar `Enter` duas ve
 Mostre a chave pública:
 
 ```bash
-cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/ju_github.pub
 ```
 
 O comando `cat` mostra o conteúdo de um arquivo.
@@ -307,7 +309,7 @@ No GitHub:
 2. Vá em **Settings**.
 3. Vá em **SSH and GPG keys**.
 4. Clique em **New SSH key**.
-5. Em **Title**, coloque algo como `notebook-ju`.
+5. Em **Title**, coloque `ju_github` para ficar igual ao nome do arquivo da chave.
 6. Em **Key**, cole a chave pública.
 7. Clique em **Add SSH key**.
 
