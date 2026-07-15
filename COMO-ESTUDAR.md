@@ -52,6 +52,23 @@ Faz tudo pra mim.
 Resolve esse desafio sem explicar.
 ```
 
-## 4. Diário de estudos
+## 5. Ferramentas sensíveis e segurança
+
+Algumas ferramentas de IA, incluindo Claude Code, podem criar arquivos locais de configuração, memória, sessão ou cache.
+
+Por isso:
+
+- abra o Claude Code a partir da pasta `~/estudos`, não diretamente dentro do repo, quando estiver apenas estudando;
+- sempre peça explicitamente onde ele deve criar arquivos;
+- confira `git status` antes de cada commit;
+- nunca commite `.env`, tokens, senhas, chaves SSH ou arquivos de configuração local.
+
+Exemplo seguro:
+
+```text
+Crie o arquivo ./ju-tpm-lab/desafios/01-ia-llm/output/resumo.md. Não altere outros arquivos.
+```
+
+## 6. Diário de estudos
 
 Atualize `docs/diario-de-estudos.md` sempre que concluir uma etapa.

@@ -427,7 +427,84 @@ está tudo certo.
 
 Não precisa entender tudo ainda. O importante é saber que o Git reconheceu o repo.
 
-## 22. Começar a estudar
+## 22. Usar Claude Code com cuidado
+
+Nos primeiros desafios você vai usar **Claude Code** para estudar.
+
+Claude Code é uma IA que consegue conversar com você, ler arquivos e, dependendo da permissão, criar ou editar arquivos.
+
+Por isso, vamos usar uma regra simples:
+
+> Para estudar e pedir explicações, abra o Claude Code na pasta `~/estudos`, que é a pasta que contém o repo, e não diretamente dentro do repo.
+
+Assim, se o Claude Code criar algum arquivo local de sessão, configuração ou memória, a chance de ele cair dentro do repositório diminui.
+
+### Como abrir uma sessão do Claude Code
+
+No terminal Linux:
+
+```bash
+cd ~/estudos
+claude --add-dir ./ju-tpm-lab
+```
+
+Explicando:
+
+- `cd ~/estudos` entra na sua pasta de estudos.
+- `claude` abre o Claude Code.
+- `--add-dir ./ju-tpm-lab` permite que ele leia o repo do desafio quando você pedir.
+
+Se o comando `claude` não existir, peça ajuda ao Gabriel/Doug para instalar ou autenticar o Claude Code.
+
+### Primeira mensagem sugerida para o Claude Code
+
+Depois que o Claude Code abrir, cole:
+
+```text
+Estou começando a trilha ju-tpm-lab. Sou iniciante. Leia o README do repo em ./ju-tpm-lab e me explique como devo começar. Não crie nem edite arquivos ainda. Apenas me oriente.
+```
+
+### Regra importante
+
+Antes de pedir para o Claude Code criar ou editar arquivos, diga exatamente onde ele deve escrever.
+
+Exemplo:
+
+```text
+Crie o arquivo ./ju-tpm-lab/desafios/01-ia-llm/output/resumo.md com meu resumo abaixo. Não altere outros arquivos.
+```
+
+Evite pedidos vagos como:
+
+```text
+Crie uns arquivos pra mim.
+```
+
+## 23. Proteção contra arquivos sensíveis
+
+O repo tem um arquivo chamado `.gitignore`.
+
+O `.gitignore` é uma lista de arquivos que o Git deve ignorar para evitar commit acidental de coisas sensíveis ou locais, como:
+
+- `.env`
+- tokens
+- senhas
+- chaves privadas
+- configurações locais do Claude Code
+- logs
+- `node_modules`
+
+Mesmo assim, antes de cada commit, rode:
+
+```bash
+git status
+```
+
+Leia com calma a lista de arquivos que aparecem.
+
+Se aparecer algo com nome parecido com senha, token, chave, `.env`, `secret`, `credential` ou `ju_github`, pare e peça ajuda ao Doug.
+
+## 24. Começar a estudar
 
 Leia nesta ordem, usando o preview de Markdown do VS Code:
 
@@ -436,7 +513,7 @@ Leia nesta ordem, usando o preview de Markdown do VS Code:
 3. `COMO-ABRIR-PR.md`
 4. `desafios/01-ia-llm/README.md`
 
-## 23. Regra de entrega
+## 25. Regra de entrega
 
 Cada desafio tem uma pasta `output/`.
 

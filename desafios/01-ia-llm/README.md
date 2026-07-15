@@ -42,11 +42,24 @@ Você precisa explicar com suas palavras:
 
 ## Passos
 
-1. Use Claude/ChatGPT para pedir explicações simples.
-2. Escreva seu próprio resumo.
-3. Crie 5 exemplos de bons prompts.
-4. Crie 5 exemplos de prompts ruins e depois melhore cada um.
-5. Escreva uma reflexão: “como uma TPM pode usar IA no dia a dia?”.
+1. Abra o Claude Code a partir da pasta de estudos:
+
+   ```bash
+   cd ~/estudos
+   claude --add-dir ./ju-tpm-lab
+   ```
+
+2. Peça explicações simples usando Claude Code. Comece com:
+
+   ```text
+   Estou no desafio 01 do repo ./ju-tpm-lab. Sou iniciante em IA. Leia o README do desafio e me explique os conceitos sem criar arquivos ainda.
+   ```
+
+3. Escreva seu próprio resumo.
+4. Crie 5 exemplos de bons prompts.
+5. Crie 5 exemplos de prompts ruins e depois melhore cada um.
+6. Escreva uma reflexão: “como uma TPM pode usar IA no dia a dia?”.
+7. Registre em `como-usei-claude-code.md` quais prompts você usou e o que revisou antes de aceitar.
 
 ## Entregáveis
 

@@ -1,9 +1,53 @@
 .DS_Store
+
+# Environment variables and local secrets
 .env
 .env.*
+!.env.example
+*.env
+
+# Private keys / certificates / credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.asc
+*.gpg
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+ju_github
+ju_github.pub
+.ssh/
+
+# Tokens and local auth files
+*token*
+*secret*
+*credential*
+credentials.json
+secrets.json
+anthropic.json
+.claude/settings.local.json
+.claude/CLAUDE.local.md
+.claude/**/*.local.json
+.claude/worktrees/
+.claude/shell-snapshots/
+
+# Node / frontend
 node_modules/
 dist/
 build/
 coverage/
-*.log
+
+# Go / backend
+tmp/
 produto-final/api-go/tmp/
+*.test
+*.out
+
+# Logs and editor/system files
+*.log
+.vscode/settings.json
+.idea/

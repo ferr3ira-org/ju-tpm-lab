@@ -34,12 +34,31 @@ Skills são instruções/procedimentos reutilizáveis que ajudam a IA a executar
 
 ## Passos
 
-1. Criar/usar uma conta de estudos para Claude Code.
-2. Abrir este repositório no Claude Code.
-3. Pedir para ele explicar a estrutura do repo.
-4. Criar uma skill simples chamada `explicar-conceito-tpm`.
-5. Testar a skill com 3 termos: API, Docker e Pull Request.
-6. Escrever o que funcionou e o que ficou confuso.
+1. Abra o terminal Linux na pasta de estudos, não dentro do repo:
+
+   ```bash
+   cd ~/estudos
+   claude --add-dir ./ju-tpm-lab
+   ```
+
+2. No Claude Code, peça primeiro orientação sem criar arquivos:
+
+   ```text
+   Estou no desafio 02 do repo ./ju-tpm-lab. Sou iniciante. Leia o README do desafio e me explique o que devo fazer. Não crie nem edite arquivos ainda.
+   ```
+
+3. Criar/usar uma conta de estudos para Claude Code.
+4. Pedir para ele explicar a estrutura do repo.
+5. Criar uma skill simples chamada `explicar-conceito-tpm`.
+6. Testar a skill com 3 termos: API, Docker e Pull Request.
+7. Quando for criar arquivos, peça o caminho completo dentro do repo, por exemplo:
+
+   ```text
+   Crie o arquivo ./ju-tpm-lab/desafios/02-claude-code-skills/output/claude-code.md. Não altere outros arquivos.
+   ```
+
+8. Escrever o que funcionou e o que ficou confuso.
+9. Antes de commit, rodar `git status` e conferir se não apareceu arquivo sensível, token, `.env`, chave SSH ou configuração local.
 
 ## Entregáveis
 
