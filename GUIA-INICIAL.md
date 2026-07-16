@@ -313,7 +313,41 @@ No GitHub:
 6. Em **Key**, cole a chave pública.
 7. Clique em **Add SSH key**.
 
-## 17. Testar conexão SSH com GitHub
+## 17. Configurar o SSH para usar a chave certa
+
+Como neste guia a chave foi criada com o nome `ju_github`, precisamos avisar o SSH para usar essa chave quando conectar no GitHub.
+
+Isso é importante porque o SSH normalmente procura chaves com nomes padrão, como `id_ed25519`. Se a chave tem outro nome, como `ju_github`, o GitHub pode responder:
+
+```text
+git@github.com: Permission denied (publickey).
+```
+
+Esse erro significa: “não encontrei uma chave válida para autenticar você”.
+
+Crie ou edite o arquivo de configuração do SSH:
+
+```bash
+nano ~/.ssh/config
+```
+
+Cole este conteúdo:
+
+```sshconfig
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/ju_github
+  IdentitiesOnly yes
+```
+
+Salve no `nano`:
+
+1. aperte `Ctrl+O`;
+2. aperte `Enter`;
+3. aperte `Ctrl+X`.
+
+## 18. Testar conexão SSH com GitHub
 
 No terminal:
 
@@ -335,9 +369,15 @@ Hi SEU_USUARIO! You've successfully authenticated...
 
 Isso significa que seu computador conseguiu provar para o GitHub que a chave é sua.
 
-Se deu erro, copie a mensagem e mande para o Doug.
+Se aparecer `Permission denied (publickey)`, confira se:
 
-## 18. Escolher onde salvar seus estudos
+- a chave pública `~/.ssh/ju_github.pub` foi cadastrada no GitHub;
+- o arquivo `~/.ssh/config` existe;
+- o `IdentityFile` aponta para `~/.ssh/ju_github`, sem `.pub`.
+
+Se ainda der erro, copie a mensagem e mande para o Doug.
+
+## 19. Escolher onde salvar seus estudos
 
 Agora escolha uma pasta para guardar o repo.
 
@@ -359,7 +399,7 @@ Para confirmar onde você está:
 pwd
 ```
 
-## 19. Clonar este repositório
+## 20. Clonar este repositório
 
 Clonar significa baixar uma cópia do repo do GitHub para seu computador.
 
@@ -391,7 +431,7 @@ COMO-ABRIR-PR.md
 desafios
 ```
 
-## 20. Abrir o repo no VS Code
+## 21. Abrir o repo no VS Code
 
 Dentro da pasta `ju-tpm-lab`, rode:
 
@@ -407,7 +447,7 @@ Se `code .` não funcionar, abra o VS Code manualmente e escolha:
 File → Open Folder → ju-tpm-lab
 ```
 
-## 21. Conferir se está tudo certo
+## 22. Conferir se está tudo certo
 
 No terminal do VS Code, rode:
 
@@ -427,7 +467,7 @@ está tudo certo.
 
 Não precisa entender tudo ainda. O importante é saber que o Git reconheceu o repo.
 
-## 22. Usar Claude Code com cuidado
+## 23. Usar Claude Code com cuidado
 
 Nos primeiros desafios você vai usar **Claude Code** para estudar.
 
@@ -480,7 +520,7 @@ Evite pedidos vagos como:
 Crie uns arquivos pra mim.
 ```
 
-## 23. Proteção contra arquivos sensíveis
+## 24. Proteção contra arquivos sensíveis
 
 O repo tem um arquivo chamado `.gitignore`.
 
@@ -504,7 +544,7 @@ Leia com calma a lista de arquivos que aparecem.
 
 Se aparecer algo com nome parecido com senha, token, chave, `.env`, `secret`, `credential` ou `ju_github`, pare e peça ajuda ao Doug.
 
-## 24. Começar a estudar
+## 25. Começar a estudar
 
 Leia nesta ordem, usando o preview de Markdown do VS Code:
 
@@ -513,7 +553,7 @@ Leia nesta ordem, usando o preview de Markdown do VS Code:
 3. `COMO-ABRIR-PR.md`
 4. `desafios/01-ia-llm/README.md`
 
-## 25. Regra de entrega
+## 26. Regra de entrega
 
 Cada desafio tem uma pasta `output/`.
 
@@ -527,7 +567,7 @@ desafios/01-ia-llm/output/resumo.md
 
 Não avance para o próximo desafio sem PR aprovado pelo Doug.
 
-## 24. Se travar
+## 27. Se travar
 
 Se alguma coisa der errado:
 
