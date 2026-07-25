@@ -39,3 +39,25 @@ Usei o Claude Code para me explicar os conceitos antes de escrever qualquer cois
 ### Próximo passo
 
 Revisar todos os entregáveis do desafio 01, abrir o PR e pedir review do Doug.
+
+## 2026-07-25 — Desafio 02: Claude Code e skills
+
+### O que estudei
+
+O que é o Claude Code e como ele difere de um chat de IA comum, o conceito de skill (instrução reutilizável salva), e testei a skill `explicar-conceito-tpm` com 3 termos: API, Docker e Pull Request.
+
+### O que entendi
+
+Entendi que o Claude Code não só conversa, ele mexe direto nos arquivos e pastas do computador — cria, edita, roda comandos — sempre pedindo minha autorização antes. Entendi também que uma skill é um formato de resposta salvo, que a IA usa como padrão sempre que é acionado, sem precisar reexplicar tudo de novo (parecido com um receituário médico pré-salvo ou uma receita pronta).
+
+### O que ainda ficou confuso
+
+No início esqueci que o Claude Code tinha acesso real aos meus arquivos, achei que fosse só mais um chat tipo o ChatGPT que só devolve texto pronto. Também esqueci de rodar o `git status` antes do commit, mas fui lembrada e segui o passo certo.
+
+### Como usei IA
+
+Usei o Claude Code para me explicar os conceitos antes de criar qualquer arquivo, revisei e ajustei minhas próprias analogias em várias rodadas antes de aceitar, testei a skill com 3 termos e só autorizei a criação de cada arquivo depois de ver o rascunho completo.
+
+### Próximo passo
+
+Rodar `git status`, commitar os 4 entregáveis do desafio 02, abrir o PR e pedir review do Doug.
