@@ -1,0 +1,3 @@
+# Como abri meu Pull Request
+
+Eu não tenho certeza se atualizei a main antes de criar a branch. Criei a branch através do comando `git checkout -b`, depois disso fiz o commit, exemplo: `git commit -m "desafio 01: IA e LLM"`, depois `git push -u origin desafio-01-ia-llm`, após isso abri o PR no GitHub e escrevi sobre a entrega do desafio 1 sobre os conceitos básicos de IA e LLM, detalhei o que fiz, o que eu aprendi e onde tive dúvida. No final preenchi o checklist das tarefas e marquei o Doug com @ pedindo para ele analisar e dar a devolutiva dele. Depois que ele aprovou, eu cliquei em merge pull request no GitHub e depois atualizei no PC com `git checkout main` e `git pull origin main`.

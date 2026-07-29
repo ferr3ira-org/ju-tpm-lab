@@ -61,3 +61,25 @@ Usei o Claude Code para me explicar os conceitos antes de criar qualquer arquivo
 ### Próximo passo
 
 Rodar `git status`, commitar os 4 entregáveis do desafio 02, abrir o PR e pedir review do Doug.
+
+## 2026-07-28 — Desafio 03: Git, SSH, branch e Pull Request
+
+### O que estudei
+
+Hoje eu estudei sobre Git, GitHub, repositório, clone, branch, commit, push, pull request, review, merge e chave SSH. Montei um glossário com todos os seus significados para que eu possa fixar o conteúdo.
+
+### O que entendi
+
+Entendi melhor a diferença entre Git e GitHub, pois antes eu achava que eles eram praticamente iguais e vi que não. E através do glossário deu pra enxergar toda a sequência de fluxo que um código passa para ser publicado.
+
+### O que ainda ficou confuso
+
+O que ficou confuso ainda foi explicar o passo a passo do fluxo de abrir um PR. Nas duas primeiras vezes o Claude me ajudou, então eu não tenho certeza se fiz o comando `git checkout main` + `git pull origin main` e `git add`. Acredito que eu precise voltar nesse assunto depois para entender/gravar melhor.
+
+### Como usei IA
+
+Usei a IA nesse desafio como guia, mas eu quem escrevi as respostas do meu jeito, a IA só foi me falando o que eu podia acrescentar, dando alguns insights.
+
+### Próximo passo
+
+Revisar os entregáveis do desafio 03, abrir o PR e pedir review do Doug.
