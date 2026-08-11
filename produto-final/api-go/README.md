@@ -1,6 +1,6 @@
 # API Go — Glossário Tech para TPM
 
-Aqui será construída a API REST em Go.
+API REST em Go para cadastrar e consultar termos técnicos do Glossário Tech.
 
 ## Recurso principal
 
@@ -18,4 +18,30 @@ Aqui será construída a API REST em Go.
 
 ## Como rodar
 
-Preencher durante o desafio 04.
+### Pré-requisitos
+
+- Go 1.22 ou superior instalado (`go version` para conferir)
+
+### Rodando o servidor
+
+```bash
+cd produto-final/api-go
+go run main.go
+```
+
+O servidor sobe em `http://localhost:8080`.
+
+### Testando
+
+Exemplo rápido com `curl`:
+
+```bash
+curl -i http://localhost:8080/terms
+```
+
+Mais exemplos de cada endpoint estão documentados em
+[`desafios/04-api-rest-go/output/testes-com-curl.md`](../../desafios/04-api-rest-go/output/testes-com-curl.md).
+
+### Observação sobre os dados
+
+Os termos são armazenados **em memória** — ou seja, os dados somem quando o servidor é reiniciado. Não há banco de dados nesta etapa do desafio.

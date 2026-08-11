@@ -83,3 +83,25 @@ Usei a IA nesse desafio como guia, mas eu quem escrevi as respostas do meu jeito
 ### Próximo passo
 
 Revisar os entregáveis do desafio 03, abrir o PR e pedir review do Doug.
+
+## 2026-08-10 — Desafio 04: API REST em Go
+
+### O que estudei
+
+Hoje estudei a construção de API REST em Go, os conceitos de API, REST, endpoint, JSON, métodos HTTP, status codes e a diferença entre front e backend. Como funciona o roteamento de uma API e como ela responde em JSON.
+
+### O que entendi
+
+Entendi que a struct vira JSON automaticamente com as tags.
+
+### O que ainda ficou confuso
+
+Achei esse desafio mais difícil e complexo. Ainda ficou confuso, se não fosse pelo Claude, seria bem difícil de dar os comandos corretos. Os conceitos de cada coisa foi fácil de entender, mas na hora de aplicar, não.
+
+### Como usei IA
+
+Usei a IA para me guiar e me dar exemplos, tirar dúvidas, melhorar as minhas respostas, revisando tudo o que era escrito.
+
+### Próximo passo
+
+Fazer o PR e ver a aprovação do Doug.
