@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 // Term representa um termo técnico do glossário.
@@ -23,6 +24,27 @@ var nextID = 1
 
 func isValidStatus(status string) bool {
 	return status == "estudando" || status == "entendido"
+}
+
+// validateTerm confere se todos os campos obrigatórios do termo foram preenchidos
+// e se o status é um dos valores permitidos. Retorna uma mensagem de erro, ou "" se estiver tudo certo.
+func validateTerm(t Term) string {
+	if strings.TrimSpace(t.Termo) == "" {
+		return "campo 'termo' é obrigatório"
+	}
+	if strings.TrimSpace(t.Categoria) == "" {
+		return "campo 'categoria' é obrigatório"
+	}
+	if strings.TrimSpace(t.ExplicacaoSimples) == "" {
+		return "campo 'explicacao_simples' é obrigatório"
+	}
+	if strings.TrimSpace(t.Exemplo) == "" {
+		return "campo 'exemplo' é obrigatório"
+	}
+	if !isValidStatus(t.Status) {
+		return "status deve ser 'estudando' ou 'entendido'"
+	}
+	return ""
 }
 
 func writeJSON(w http.ResponseWriter, status int, body any) {
@@ -63,8 +85,8 @@ func createTerm(w http.ResponseWriter, r *http.Request) {
 		writeJSONError(w, http.StatusBadRequest, "JSON inválido")
 		return
 	}
-	if !isValidStatus(t.Status) {
-		writeJSONError(w, http.StatusBadRequest, "status deve ser 'estudando' ou 'entendido'")
+	if msg := validateTerm(t); msg != "" {
+		writeJSONError(w, http.StatusBadRequest, msg)
 		return
 	}
 
@@ -88,8 +110,8 @@ func updateTerm(w http.ResponseWriter, r *http.Request) {
 		writeJSONError(w, http.StatusBadRequest, "JSON inválido")
 		return
 	}
-	if !isValidStatus(updated.Status) {
-		writeJSONError(w, http.StatusBadRequest, "status deve ser 'estudando' ou 'entendido'")
+	if msg := validateTerm(updated); msg != "" {
+		writeJSONError(w, http.StatusBadRequest, msg)
 		return
 	}
 

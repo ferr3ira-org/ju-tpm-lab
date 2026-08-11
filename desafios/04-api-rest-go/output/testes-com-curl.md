@@ -76,6 +76,22 @@ Content-Type: application/json
 {"erro":"status deve ser 'estudando' ou 'entendido'"}
 ```
 
+## POST /terms — campo obrigatório vazio
+
+```
+curl -s -i -X POST http://localhost:8080/terms \
+  -H "Content-Type: application/json" \
+  -d '{"termo":"","categoria":"Backend","explicacao_simples":"x","exemplo":"y","status":"estudando"}'
+```
+
+**Resposta:**
+```
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{"erro":"campo 'termo' é obrigatório"}
+```
+
 ## PUT /terms/{id} — atualizar termo
 
 ```
@@ -90,6 +106,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {"id":1,"termo":"API","categoria":"Backend","explicacao_simples":"Uma forma de sistemas conversarem entre si.","exemplo":"Um app de clima consulta uma API para buscar a previsão.","status":"entendido"}
+```
+
+## PUT /terms/{id} — campo obrigatório vazio
+
+```
+curl -s -i -X PUT http://localhost:8080/terms/1 \
+  -H "Content-Type: application/json" \
+  -d '{"termo":"Docker","categoria":"","explicacao_simples":"x","exemplo":"y","status":"estudando"}'
+```
+
+**Resposta:**
+```
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{"erro":"campo 'categoria' é obrigatório"}
 ```
 
 ## DELETE /terms/{id} — remover termo
@@ -129,6 +161,8 @@ Content-Type: application/json
 | `GET /terms/{id}` (existente) | 200 | OK |
 | `GET /terms/{id}` (inexistente) | 404 | OK |
 | `POST /terms` (status inválido) | 400 | OK |
+| `POST /terms` (campo obrigatório vazio) | 400 | OK |
 | `PUT /terms/{id}` | 200 | OK |
+| `PUT /terms/{id}` (campo obrigatório vazio) | 400 | OK |
 | `DELETE /terms/{id}` | 200 | OK |
 | `GET /terms` (após remoção) | 200 | OK |
