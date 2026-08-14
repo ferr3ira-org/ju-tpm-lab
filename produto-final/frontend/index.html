@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Glossário TECH para TPM</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+  </head>
+
+  <body>
+
+    <h1>
+        Glossário TECH para TPM
+    </h1>
+
+    <form>
+        <input type="text" id="termo" placeholder="Termo">
+        <input type="text" id="categoria" placeholder="Categoria">
+        <input type="text" id="explicacao" placeholder="Explicação simples">
+        <input type="text" id="exemplo" placeholder="Exemplo">
+
+        <select id="status">
+    <option value="estudando">Estudando</option>
+    <option value="entendido">Entendido</option>
+  </select>
+
+        <button type="button" id="btn-salvar">Salvar</button>
+        <button type="button" id="btn-cancelar" style="display: none;">Cancelar</button>
+
+        </form>
+
+
+        <table id="tabela-termos">
+<thead>
+<tr>
+<th>Termo</th>
+<th>Categoria</th>
+<th>Explicação</th>
+<th>Exemplo</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+</thead>
+
+<tbody>
+
+
+</tbody>
+
+</table>
+
+
+<script src="app.js"></script>
+
+  </body>
+  </html>

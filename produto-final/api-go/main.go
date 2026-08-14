@@ -53,6 +53,22 @@ func writeJSON(w http.ResponseWriter, status int, body any) {
 	json.NewEncoder(w).Encode(body)
 }
 
+// corsMiddleware libera o acesso da API para o front-end, que roda em outra origem,
+// e responde ao preflight (OPTIONS) que o navegador envia antes de POST/PUT/DELETE
+// com corpo JSON.
+func corsMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		if r.Method == http.MethodOptions {
+			w.WriteHeader(http.StatusNoContent)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func writeJSONError(w http.ResponseWriter, status int, message string) {
 	writeJSON(w, status, map[string]string{"erro": message})
 }
@@ -153,5 +169,5 @@ func main() {
 	mux.HandleFunc("DELETE /terms/{id}", deleteTerm)
 
 	fmt.Println("Servidor rodando em http://localhost:8080")
-	http.ListenAndServe(":8080", mux)
+	http.ListenAndServe(":8080", corsMiddleware(mux))
 }
