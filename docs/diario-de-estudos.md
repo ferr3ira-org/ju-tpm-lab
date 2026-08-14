@@ -105,3 +105,25 @@ Usei a IA para me guiar e me dar exemplos, tirar dúvidas, melhorar as minhas re
 ### Próximo passo
 
 Fazer o PR e ver a aprovação do Doug.
+
+## 2026-08-13 — Desafio 05: Front-end
+
+### O que estudei
+
+Construí a interface do glossário (HTML/JS simples, sem framework) que consome a API do desafio 04: listar, criar, editar, remover e marcar termo como entendido. Estudei como o `fetch` do JavaScript faz as mesmas chamadas HTTP que eu fazia com `curl`, e como usar o resultado em JSON pra montar a tabela na tela.
+
+### O que entendi
+
+Entendi melhor, na prática, a diferença entre front e back: o front não guarda nada sozinho, ele só pede pro back-end e mostra o que volta. E entendi o que é CORS e por que existe.
+
+### O que ainda ficou confuso
+
+Tive um bug de CORS que não esperava: minha API já tinha o header `Access-Control-Allow-Origin`, mas mesmo assim criar/editar/remover não funcionava no navegador, sem erro visível. Foi confuso descobrir que o problema era o preflight `OPTIONS`, que o navegador manda antes do POST/PUT quando o corpo é JSON — e que testar só com `curl` não pega esse tipo de problema, porque o `curl` não faz esse preflight sozinho.
+
+### Como usei IA
+
+Usei o Claude Code pra escrever o front-end junto comigo, testar o fluxo completo no navegador (não só por `curl`), e pra investigar e corrigir o bug de CORS. Revisei o código e os textos antes de aceitar.
+
+### Próximo passo
+
+Fazer o PR e ver a aprovação do Doug.
