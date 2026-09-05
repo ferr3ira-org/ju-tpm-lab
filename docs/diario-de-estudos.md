@@ -127,3 +127,25 @@ Usei o Claude Code pra escrever o front-end junto comigo, testar o fluxo complet
 ### Próximo passo
 
 Fazer o PR e ver a aprovação do Doug.
+
+## 2026-09-05 — Desafio 06: Docker e Docker Compose
+
+### O que estudei
+
+Estudei Docker: container, imagem, Dockerfile, docker-compose e portas. Nesse desafio 6 aprendi entre várias outras coisas, sobre o dockerfile, como ele funciona, o que colocar, como definir onde vou trabalhar. Os significados de FROM, WORKDIR, COPY, RUN, EXPOSE e CMD. A diferença do dockerfile da API para o do front-end. A diferença entre as portas onde fica cada coisa. Também tive dois problemas na instalação do Docker (um de codinome da distribuição, outro de permissão de grupo) que consegui resolver com ajuda do Claude Code. Consegui testar o docker compose para ver se tinha dado certo e abri o localhost:3000.
+
+### O que entendi
+
+Entendi que API e front precisam de portas diferentes e o motivo de eu ter colocado a de front como 3000. O Claude sugeriu, mas eu não sabia muito bem o porquê e ele me explicou. Duas coisas diferentes não podem estar na mesma porta ao mesmo tempo na minha máquina. Se a API já ocupa 8080, o front precisa de outra e não podia ser 80, porque 80 costuma ser a porta padrão da internet. E às vezes ela já está ocupada por outro programa, então não faria sentido colocar, porque poderia dar problema depois. Ele me explicou que 3000 é uma convenção do mercado, que muitas ferramentas de frontend usam 3000 como padrão de desenvolvimento, então quem visse ia reconhecer que 3000 é o front. Entendi que o Dockerfile é como se fosse a receita — tudo que está ali é pra mostrar onde e como minha aplicação vai rodar —, e que o docker-compose é o cardápio da refeição toda: ele diz quais containers eu quero que sirvam juntos e como eles se conectam.
+
+### O que ainda ficou confuso
+
+Foi principalmente a sintaxe do YAML, como eu não tenho conhecimento técnico e ainda não peguei muito de escrever código, pra mim fica um pouco difícil entender o que eu coloco, como coloco, pra que serve aquilo, etc. É como se eu tivesse que decorar, mas eu sei que não precisa, o que preciso é entender o conceito, que sinto que ainda preciso estudar mais sobre.
+
+### Como usei IA
+
+Usei a IA para me ajudar em diversas fases, o Claude me ajudou a entender os conceitos antes de eu escrever, leu os meus rascunhos e me deu toques do que eu podia melhorar para só depois eu aprovar. Ajudou a rodar o teste real para confirmar que tudo estava funcionando, e confirmamos que estava. Rodei o localhost e deu tudo certo. Também me ajudou a tentar entender melhor o docker compose na parte de sintaxe e montar os códigos da maneira correta.
+
+### Próximo passo
+
+Commitar tudo, dar push e abrir o PR.
