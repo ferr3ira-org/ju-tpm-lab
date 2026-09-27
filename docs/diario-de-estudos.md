@@ -149,3 +149,25 @@ Usei a IA para me ajudar em diversas fases, o Claude me ajudou a entender os con
 ### Próximo passo
 
 Commitar tudo, dar push e abrir o PR.
+
+## 2026-09-27 — Desafio 07: TPM — revisão de produto
+
+### O que estudei
+
+Tratei o Glossário Tech como um produto de verdade: revisei os 4 documentos de produto (produto.md, prd.md, api-design.md, data-modeling.md) pra confirmar se ainda batiam com o que foi construído, e produzi 6 entregáveis: backlog, critérios de aceite, riscos, roadmap, plano de release e revisão de documentação do produto.
+
+### O que entendi
+
+Entendi a diferença entre backlog (tudo que quero fazer, sem ordem de tempo) e roadmap (quando e em que ordem, com o porquê da prioridade). Entendi que critérios de aceite da entrega do produto são diferentes dos documentos entregáveis do desafio — no início confundi os dois no plano de release, mas consegui corrigir depois de entender a diferença. Também entendi melhor como apresentar o mesmo produto de formas diferentes: pra um dev, falando de tecnologia e endpoints; pra um stakeholder, falando do que o produto resolve e do valor, sem termos técnicos.
+
+### O que ainda ficou confuso
+
+No início do desafio, no arquivo de riscos, entendi errado que os dados sobreviveriam a um restart mesmo com armazenamento em memória — me corrigi depois de entender melhor o conceito.
+
+### Como usei IA
+
+Usei o Claude Code pra me explicar cada conceito antes de escrever (roadmap, plano de release, revisão de documentação), dei meus rascunhos, recebi feedback específico do que ajustar, e só depois de revisar aprovei a criação de cada arquivo.
+
+### Próximo passo
+
+Commitar os 6 entregáveis, dar push e abrir o PR — esse é o último desafio da trilha.
